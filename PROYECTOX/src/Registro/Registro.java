@@ -6,12 +6,16 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 public class Registro extends javax.swing.JFrame {
+
     public Registro() {
         initComponents();
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -115,57 +119,59 @@ public class Registro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegActionPerformed
-        String r= "";
-        if(!(r.equals(JCed.getText())&& r.equals(JNom.getText())&& r.equals(JApe.getText())&& r.equals(JDir.getText())&& r.equals(JDir.getText())&& r.equals(JCiud.getText()))){
-            JOptionPane.showMessageDialog(this,"Debe ingresar todos los datos","Sistema",JOptionPane.ERROR_MESSAGE);
+        String r = "";
+        if (!(r.equals(JCed.getText()) && r.equals(JNom.getText()) && r.equals(JApe.getText()) && r.equals(JDir.getText()) && r.equals(JDir.getText()) && r.equals(JCiud.getText()))) {
+            JOptionPane.showMessageDialog(this, "Debe ingresar todos los datos", "Sistema", JOptionPane.ERROR_MESSAGE);
             Registrar();
             Nivel0 obj = new Nivel0();
             obj.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(this,"Sistema","Todo bien",JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "Sistema", "Todo bien", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_BtnRegActionPerformed
-    private Connection conexion(){
-        Connection cn=null;
-        String query="";
-        try{
+    private Connection conexion() {
+        Connection cn = null;
+        String query = "";
+        try {
             String url = "jdbc:oracle:thin:@DESKTOP-M2DQEAJ:1521:XE";
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            cn = DriverManager.getConnection(url,"hr","hr"); 
-        }catch(ClassNotFoundException ex){
-           
-        }
-        catch(SQLException ex){
-            Logger.getLogger(Registro.class.getName()).log(Level.SEVERE,null,ex);
+            cn = DriverManager.getConnection(url, "hr", "hr");
+        } catch (ClassNotFoundException ex) {
+
+        } catch (SQLException ex) {
+            Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
         }
         return cn;
     }
-    public int ejecutar(Connection cn, String sQuery){
+
+    public int ejecutar(Connection cn, String sQuery) {
         Statement st;
-        int fila=0;
-        try{
-            st=cn.createStatement();
-            fila=st.executeUpdate(sQuery);
+        int fila = 0;
+        try {
+            st = cn.createStatement();
+            fila = st.executeUpdate(sQuery);
             st.close();
-        }
-        catch(SQLException ex){
-            Logger.getLogger(Registro.class.getName()).log(Level.SEVERE,null,ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
         }
         return fila;
     }
-    public void Registrar(){
+
+    public void Registrar() {
         Connection cn;
         String sQuery;
-        cn=conexion();
-        if(cn!=null){
-            sQuery="Insert into CLIENTES values ("+this.JCed.getText()+",'"+this.JNom.getText()+"','"+"','"+this.JApe.getText()+this.JDir.getText()+"','"+this.JTel.getText()+"','"+this.JCiud.getText()+"')";
+        cn = conexion();
+        if (cn != null) {
+            sQuery = "Insert into CLIENTES values (" + this.JCed.getText() + ",'" + this.JNom.getText() + "','" + "','" + this.JApe.getText() + this.JDir.getText() + "','" + this.JTel.getText() + "','" + this.JCiud.getText() + "')";
             this.ejecutar(cn, sQuery);
         }
     }
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

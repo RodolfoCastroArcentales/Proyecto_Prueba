@@ -1,11 +1,14 @@
 package proyectox;
 import java.awt.event.*;
 import java.util.Arrays;
+import javax.swing.JFrame;
+import javax.swing.UIManager;
 public class AccesoalSistema extends javax.swing.JFrame implements ActionListener{
     public AccesoalSistema() {
-        initComponents();
+        initComponents();       
         this.setSize(329,440);
         JBtnA.addActionListener(this);
+        setLocationRelativeTo(null);        
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -45,7 +48,10 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
         JBtnA.setFont(new java.awt.Font("Californian FB", 1, 18)); // NOI18N
         JBtnA.setText("Acceder");
         getContentPane().add(JBtnA);
-        JBtnA.setBounds(100, 250, 110, 29);
+        JBtnA.setBounds(100, 251, 120, 40);
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\NetBeansProjects\\PROYECTO_S3\\PROYECTOX\\src\\Imagenes\\Fondo_Seguridad3.jpg")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 320, 400);
 
@@ -78,7 +84,7 @@ public class AccesoalSistema extends javax.swing.JFrame implements ActionListene
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+            public void run() {               
                 new AccesoalSistema().setVisible(true);
             }
         });
