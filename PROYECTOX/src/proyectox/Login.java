@@ -61,6 +61,7 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\NetBeansProjects\\PROYECTO_S3\\PROYECTOX\\src\\Imagenes\\fondo-plantilla-diseno-tecnologia-moderna-diseno-marco-negro-azul-metalico-abstracto_98702-50.jpg")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(-40, 0, 450, 570);
 
