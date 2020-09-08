@@ -8,6 +8,8 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
         setLocationRelativeTo(this);
         JBtnIngreso.addMouseListener(this);
         JBtnRegistro.addMouseListener(this);
+        Fondo.getClass().getResource("/Imagenes/fondo-plantilla-diseno-tecnologia.jpg");
+        
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -19,16 +21,19 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
         jLabel5 = new javax.swing.JLabel();
         JBtnRegistro = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 153, 255));
         getContentPane().setLayout(null);
 
-        JBtnIngreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopis/user.jpg"))); // NOI18N
+        JBtnIngreso.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\NetBeansProjects\\PROYECTO_S3\\PROYECTOX\\src\\Imagenes\\AccSis2.jpg")); // NOI18N
         JBtnIngreso.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        JBtnIngreso.setBorderPainted(false);
+        JBtnIngreso.setPressedIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\NetBeansProjects\\PROYECTO_S3\\PROYECTOX\\src\\Imagenes\\AccSis.jpg")); // NOI18N
+        JBtnIngreso.setRolloverIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\NetBeansProjects\\PROYECTO_S3\\PROYECTOX\\src\\Imagenes\\AccSis2.jpg")); // NOI18N
         getContentPane().add(JBtnIngreso);
-        JBtnIngreso.setBounds(90, 340, 60, 60);
+        JBtnIngreso.setBounds(90, 340, 60, 70);
 
         jLabel2.setFont(new java.awt.Font("Lucida Calligraphy", 1, 27)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -48,7 +53,7 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
         getContentPane().add(jLabel5);
         jLabel5.setBounds(180, 470, 140, 30);
 
-        JBtnRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopis/Registro.jpg"))); // NOI18N
+        JBtnRegistro.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\NetBeansProjects\\PROYECTO_S3\\PROYECTOX\\src\\Imagenes\\AccSis2.jpg")); // NOI18N
         JBtnRegistro.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(JBtnRegistro);
         JBtnRegistro.setBounds(90, 450, 60, 70);
@@ -59,11 +64,12 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
         getContentPane().add(jLabel6);
         jLabel6.setBounds(180, 360, 140, 30);
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Rodolfoblue\\Documents\\NetBeansProjects\\PROYECTO_S3\\PROYECTOX\\src\\Imagenes\\fondo-plantilla-diseno-tecnologia-moderna-diseno-marco-negro-azul-metalico-abstracto_98702-50.jpg")); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(-40, 0, 450, 570);
+        Fondo.setBackground(new java.awt.Color(255, 255, 255));
+        Fondo.setForeground(new java.awt.Color(255, 255, 255));
+        Fondo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Fondo.setToolTipText("");
+        getContentPane().add(Fondo);
+        Fondo.setBounds(-40, 0, 490, 550);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -101,9 +107,9 @@ public class Login extends javax.swing.JFrame implements  MouseListener{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Fondo;
     private javax.swing.JButton JBtnIngreso;
     private javax.swing.JButton JBtnRegistro;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
